@@ -30,30 +30,19 @@ This project was created as a demonstration of backend development fundamentals,
 
 src/
 └── main/
-
 ├── kotlin/com/vlad/backenddemo
-
 │ ├── BackendDemoApplication.kt
-
 │ ├── Item.kt
-
 │ ├── ItemRepository.kt
-
 │ ├── ItemService.kt
-
 │ └── ItemController.kt
-
 └── resources/
-
 ├── application.properties
-
 └── data.sql (optional seed data)
 
-**Architecture Pattern:** Controller → Service → Repository → Database
-
-This separation shows clean layering and is commonly used in real production applications.
-
 ---
+
+
 
 ## 🔥 Features
 
@@ -68,20 +57,6 @@ This separation shows clean layering and is commonly used in real production app
 
 ---
 
-## 🧪 Example JSON
-
-### Create (POST `/api/items`)
-```json
-{
-  "name": "Laptop",
-  "price": 4999.99
-}
-
-Update (PUT /api/items/1)
-{
-  "name": "Gaming Laptop",
-  "price": 5999.99
-}
 
 ▶️ Running the Project (Local)
 
