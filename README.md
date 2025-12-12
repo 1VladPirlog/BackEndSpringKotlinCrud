@@ -44,23 +44,19 @@ This project was created as a demonstration of backend development fundamentals,
 
 This application can be run in three different ways, depending on your needs:
 
-Local run with an in-memory database (H2)
+- **Local run with an in-memory database** (H2)
 
-Local run with PostgreSQL (Docker)
+- **Local run with PostgreSQL** (Docker)
 
-Fully containerized (Docker)
+- **Fully containerized** (Docker)
 
 ## 🟢 Option 1: Local Run (H2 – Default)
 
 This is the simplest way to start the application.
 
-Prerequisites
+Prerequisites: JDK 21+, Gradle Wrapper (included in the project), 
 
-JDK 21+
-
-Gradle Wrapper (included in the project)
-
-Start the application
+- **Start the application**
 
   ./gradlew bootRun
 
