@@ -30,7 +30,7 @@ This project was created as a demonstration of backend development fundamentals,
 
 src/
 └── main/
-├── kotlin/com/vlad/backenddemo
+├── kotlin/com/vlad/backenddemo/
 │ ├── BackendDemoApplication.kt
 │ ├── Item.kt
 │ ├── ItemRepository.kt
