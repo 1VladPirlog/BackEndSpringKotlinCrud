@@ -26,24 +26,6 @@ This project was created as a demonstration of backend development fundamentals,
 
 ---
 
-## 📁 Project Structure
-
-src/
-└── main/
-├── kotlin/com/vlad/backenddemo/
-│ ├── BackendDemoApplication.kt
-│ ├── Item.kt
-│ ├── ItemRepository.kt
-│ ├── ItemService.kt
-│ └── ItemController.kt
-└── resources/
-├── application.properties
-└── data.sql (optional seed data)
-
----
-
-
-
 ## 🔥 Features
 
 ### ✔ CRUD API for Items
@@ -58,7 +40,7 @@ src/
 ---
 
 
-▶️ Running the Project (Local)
+## ▶️ Running the Project (Local)
 
 Make sure you have:
 
