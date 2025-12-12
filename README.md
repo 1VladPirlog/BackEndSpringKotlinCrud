@@ -30,14 +30,23 @@ This project was created as a demonstration of backend development fundamentals,
 
 src/
 └── main/
+
 ├── kotlin/com/vlad/backenddemo
+
 │ ├── BackendDemoApplication.kt
+
 │ ├── Item.kt
+
 │ ├── ItemRepository.kt
+
 │ ├── ItemService.kt
+
 │ └── ItemController.kt
+
 └── resources/
+
 ├── application.properties
+
 └── data.sql (optional seed data)
 
 **Architecture Pattern:** Controller → Service → Repository → Database
