@@ -42,101 +42,47 @@ This project was created as a demonstration of backend development fundamentals,
 
 ## ▶️ Running the Project (Local)
 
-Make sure you have:
+This application can be run in three different ways, depending on your needs:
+
+Local run with an in-memory database (H2)
+
+Local run with PostgreSQL (Docker)
+
+Fully containerized (Docker)
+
+## 🟢 Option 1: Local Run (H2 – Default)
+
+This is the simplest way to start the application.
+
+Prerequisites
 
 JDK 21+
 
-Gradle wrapper (already included)
+Gradle Wrapper (included in the project)
 
-Docker (optional)
+Start the application
 
-Run:
+  ./gradlew bootRun
 
-./gradlew bootRun
+Application URL
 
+  http://localhost:8080
 
-The application starts on:
+Health check endpoint
 
-http://localhost:8080
+  http://localhost:8080/hello
 
+## 🗄 In-Memory Database (H2)
 
-Test the health endpoint:
+By default, the application uses an H2 in-memory database for easy local development.
 
-http://localhost:8080/hello
+H2 Web Console
 
-🗄 In-Memory Database (H2)
+  http://localhost:8080/h2-console
 
-This project uses H2 by default for easy setup.
+Connection details
 
-H2 Console (GUI):
-
-http://localhost:8080/h2-console
-
-
-JDBC URL (auto-configured):
-
-jdbc:h2:mem:testdb
-
-🐳 Running with PostgreSQL (Docker)
-
-If using Docker, first create a docker-compose.yml:
-
-version: '3.8'
-services:
-  db:
-    image: postgres:15
-    environment:
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: pass
-      POSTGRES_DB: items
-    ports:
-      - "5432:5432"
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-
-volumes:
-  postgres_data:
-
-
-Start Postgres:
-
-docker-compose up -d
-
-
-Then update application.properties:
-
-spring.datasource.url=jdbc:postgresql://localhost:5432/items
-spring.datasource.username=user
-spring.datasource.password=pass
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=true
-
-📦 Dockerizing the App
-
-Add a Dockerfile such as:
-
-FROM eclipse-temurin:21-jdk
-
-WORKDIR /app
-
-COPY build/libs/*.jar app.jar
-
-EXPOSE 8080
-
-ENTRYPOINT ["java", "-jar", "app.jar"]
-
-
-Build the jar:
-
-./gradlew build
-
-
-Build image:
-
-docker build -t backend-demo .
-
-
-Run container:
-
-docker run -p 8080:8080 backend-demo
+  JDBC URL: jdbc:h2:mem:testdb
+  Username: sa
+  Password: (empty)
 
